@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #1f2235;
+    --secondary-color: #292b44;
+    --tertiary-color: #f43b52;
+    --tertiary-color-hover: #c02d3e;
+    --bg-color: #191c29;
+    --font-color: #f7f7fd;
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    --paddin-bottom: 100px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+    font-family: "Poppins", sans-serif;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+.Container,
+.ModalContainer {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 431px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}
+
+nav {
+    width: 100%;
+    padding: 0 30px;
+    min-height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: var(--primary-color);
+}
+
+.Logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.Logo span, footer span {
+    color: var(--tertiary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.Menu a p {
+    padding: 15px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.Menu a p:hover {
+    background-color: var(--tertiary-color);
+}
+
+.CloseMenu {
+    display: none;
+}
+
+.Hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.Banner {
+    min-width: 100%;
+    min-height: 55vh;
+    background-color: var(--secondary-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.Info {
+    width: 50%;
+    min-width: 40%;
+    max-height: 100%;
+}
+
+.InfoIcons,
+.InfoText,
+.InfoButtons {
+    margin-bottom: 15px;
+}
+
+.InfoIcons a {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 50%;
+}
+
+.InfoIcons a:hover {
+    background-color: var(--tertiary-color);
+    transition: 0.2s;
+}
+
+.InfoText h1 {
+    margin-bottom: 10px;
+    font-size: 2.4em;
+}
+
+.InfoText p {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.InfoButtons a {
+    height: 40px;
+    margin-right: 10px;
+    padding: 10px 25px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.InfoButtons a:hover {
+    background-color: var(--tertiary-color);
+    transition: 0.2s;
+}
+
+#YTButton {
+    background-color: var(--tertiary-color);
+    padding: 5px 25px;
+    font-size: 1.2rem;
+}
+
+#YTButton:hover {
+    background-color: transparent;
+}
+
+.Banner img {
+    margin: 0 20px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+.Skills {
+    min-height: 50vh;
+    width: 100%;
+    padding-bottom: var(--paddin-bottom);
+    background-color: var(--primary-color);
+}
+
+.SectionInformation {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SectionInformation h2 {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: var(--tertiary-color);
+}
+
+.SectionInformation h3 {
+    margin-bottom: 10px;
+}
+
+.SectionInformation h3 {
+    margin-bottom: 10px;
+}
+
+.Cards {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.Card {
+    min-height: 200px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.Card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+}
+
+.CardIcon i {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: var(--tertiary-color);
+}
+
+.CardTitle {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.CardDescription {
+    font-size: 0.8em;
+}
+
+.Sobre {
+    min-height: 50vh;
+    background-color: var(--secondary-color);
+    padding-bottom: var(--paddin-bottom);
+}
+
+.AboutConteudo {
+    margin: 0 auto;
+    width: 80%;
+    max-height: 50%;
+    display: grid;
+    grid-template:
+        "a b b"
+        "a c d"
+        "a e f";
+    gap: 20px;
+    align-items: center;
+
+}
+
+.AboutConteudo img {
+    grid-area: a;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+
+}
+
+.AboutText {
+    grid-area: b;
+    font-weight: bold;
+    font-size: 1.3em;
+
+}
+
+.AboutText span {
+    font-weight: 400;
+    font-size: .7em;
+    line-height: .5em;
+}
+
+.AboutName {
+    grid-area: c;
+
+}
+
+.AboutPhone {
+    grid-area: d;
+
+}
+
+.AboutEmail {
+    grid-area: e;
+
+}
+
+.AboutLinkedin {
+    grid-area: f;
+
+}
+
+.AboutInfos p {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--tertiary-color);
+}
+
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.Plus {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: var(--tertiary-color);
+}
+
+.Plus:hover {
+    background-color: var(--tertiary-color-hover);
+}
+
+.Modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.ModalContainer {
+    background-color: transparent;
+    height: 100%;
+}
+
+.ModalTop {
+    width: 100%;
+    margin: 20px -20px;
+    font-size: 2em;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.ModalTop i:hover {
+    animation: rotate 0.5s;
+    color: var(--tertiary-color);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(180deg);
+        color: var(--tertiary-color);
+    }
+}
+
+.ModalBody {
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.ModalConteudo {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+}
+
+.Flex {
+    display: flex;
+}
+
+.line {
+    margin: 20px 0;
+    height: 0px;
+    width: 60px;
+    border: 1px solid var(--tertiary-color);
+    align-self: center;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: var(--tertiary-color);
+}
+
+@media (max-width: 1015px) {
+    .Info {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .Cards {
+        width: 85%;
+    }
+
+    .AboutConteudo {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 25px;
+    }
+
+    .Menu {
+        display: none;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+        background-color: var(--primary-color);
+    }
+
+    .Menu a p {
+        border-bottom: 1px solid var(--secondary-color);
+    }
+
+    .Hamburger,
+    .CloseMenu {
+        display: inline;
+    }
+
+    .Menu a p i {
+        margin-right: 10px;
+    }
+
+    .Info {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .SectionInformation {
+        padding-top: 30px;
+    }
+
+    .Cards, .AboutConteudo {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 620px) {
+    .Banner {
+        padding: 20px 0 var(--paddin-bottom);
+        flex-wrap: wrap;
+    }
+
+    .Info {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .Cards {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .Card:hover {
+        transform: scale(1.05);
+        box-shadow: var(--shadow);
+    }
+
+    .AboutConteudo {
+        grid-template: "a""b""c""d""e""f";
+    }
+
+    .AboutConteudo img {
+        margin: 0 auto;
+    }
+}
+
+.Visible {
+    display: inline;
+}
+
+.NoScroll {
+    overflow: hidden;
+}
